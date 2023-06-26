@@ -4,9 +4,15 @@ Smart kitchen systems provide interactive screens or mobile apps for easy access
 
 #### Tech stack
 <ul>
-<li>java</li>
-<li>mysql</li>
+  <li>java</li>
+  <li>mysql</li>
+  <li>Maven</li>
+  <li>Spring Boot</li>
+  <li>Hibernate</li>
+  <li>Spring Data Jpa</li>
 </ul>
+
+
 
 ### Modules
 <ul>
