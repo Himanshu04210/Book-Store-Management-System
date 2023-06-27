@@ -31,7 +31,6 @@ Smart kitchen systems provide interactive screens or mobile apps for easy access
       <li>Administrator role for the entire application.</li>
       <li>Admin can see all the active consumers.</li>
       <li>Admin can watch all history for particular consumer as well as all the consumers.</li>
-      <li>Admin can delete the consumer and can see all the generated bill till now also transactions.</li>
       <li>Admin can add and update the books</li>
     </ul>
   </li>
