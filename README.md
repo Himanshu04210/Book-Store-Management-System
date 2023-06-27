@@ -19,7 +19,6 @@ Smart kitchen systems provide interactive screens or mobile apps for easy access
 <li>Login, Logout Module</li>
 <li>Admin Module</li>
 <li>Consumer Module</li>
-<li>Purchase Book</li>
 </ul>
 
 ### Features
