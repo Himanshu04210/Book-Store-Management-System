@@ -31,7 +31,7 @@ public class UserServiceImple implements UserService {
 	
 	@Override
 	public String logIn(LongInCrede crede) throws UserException {
-		User user = userRepository.findByUsername(crede.getUsername());
+		User user = userRepository.findByEmail(crede.getEmail());
 		
 		if(user == null) throw new UserException("Username is not matched");
 		

@@ -22,13 +22,13 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping("/user")
+	@PostMapping("/users")
 	public ResponseEntity<User> registerUser(@RequestBody User user) throws UserException {
 		User savedUser = userService.RegisterUser(user);
 		return new ResponseEntity<User>(savedUser, HttpStatus.CREATED);
 	}
 
-	@GetMapping("/user/{key}") 
+	@GetMapping("/users/{key}") 
 	public ResponseEntity<List<User>> getAllUser(@PathVariable String key) throws UserException {
 
 		List<User> users = userService.getAllUsers(key);

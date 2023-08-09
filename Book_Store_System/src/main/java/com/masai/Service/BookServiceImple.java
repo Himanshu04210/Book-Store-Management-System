@@ -32,7 +32,9 @@ public class BookServiceImple implements BookService{
 			throw new UserException("User Not Logged In with this username");
 			
 		}
-		List<Book> books = bookRepository.findAllBooks();
+		Optional<List<Book>> opt = bookRepository.findAllTheBooks();
+		if(opt.isEmpty()) throw new BookException("No Book is present");
+		List<Book> books = opt.get();
 		if(books.isEmpty()) throw new BookException("No Book is present");
 		return books;
 	}
@@ -63,7 +65,9 @@ public class BookServiceImple implements BookService{
 			
 		}
 		
-		Book book = bookRepository.findByIsbn(isbn);
+		Optional<Book> opt = bookRepository.findBookByIsbn(isbn);
+		if(opt.isEmpty()) throw new BookException("No book is present is this isbn");
+		Book book = opt.get();
 		if(book == null) throw new BookException("No book is present");
 		return book;
 	}
@@ -77,7 +81,10 @@ public class BookServiceImple implements BookService{
 			
 		}
 		
-		List<Book> books = bookRepository.findByTitle(title);
+		Optional<List<Book>> opt = bookRepository.findBooksByTitle(title);
+		if(opt.isEmpty()) throw new BookException("No Book is present with this title");
+		List<Book> books = opt.get();
+
 		if(books.isEmpty()) throw new BookException("No Book is avaiable");
 		return books;
 	}
@@ -91,7 +98,10 @@ public class BookServiceImple implements BookService{
 			
 		}
 		
-		List<Book> books = bookRepository.findByAuthor(author);
+		Optional<List<Book>> opt = bookRepository.findBooksByAuthor(author);
+		if(opt.isEmpty()) throw new BookException("No Book is present with this author");
+		List<Book> books = opt.get();
+
 		if(books.isEmpty()) throw new BookException("No Book is avaiable");
 		return books;
 	}
